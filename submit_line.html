@@ -1,0 +1,16 @@
+{% extends 'admin/submit_line.html' %}
+
+{% block submit-row %}
+    <div class="submit-row">
+        <div class="change-buttons">
+            {{ formset.management_form }}
+            {% if show_save %}{% submit_row %}{% endif %}
+            {% if show_delete_link %}{% delete_row %}{% endif %}
+        </div>
+        <div class="other-buttons">
+            {# Add your custom buttons here #}
+            <input type="submit" name="_extra_action" value="Custom Action 1" class="default" />
+            <input type="submit" name="_extra_action" value="Custom Action 2" class="default" />
+        </div>
+    </div>
+{% endblock %}

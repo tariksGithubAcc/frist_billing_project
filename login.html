@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+</head>
+<body>
+
+    <section class="vh-100 bg-image" style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 640px;">
+
+
+
+    {% if error_message %}
+        <p>{{ error_message }}</p>
+    {% endif %}
+    
+    <form method="post">
+        {% csrf_token %}
+        <label for="username" style="font-size: xx-large; padding-left: 500px; margin-top: 500px;">Username:</label>
+        <input type="text" id="username" name="username" style="height: 20px;"><br><br>
+        
+        <label for="password" style="font-size: xx-large; padding-left: 500px;">Password:</label>
+        <input type="password" id="password" name="password" style="height: 20px;"><br><br>
+        
+        <input type="submit" value="Login" style="margin-left: 500px;">
+    </form>
+</body>
+</html>
